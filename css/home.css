@@ -1,0 +1,106 @@
+
+#centeredHome {
+  width: 70vw;
+  margin: auto;
+  margin-top: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divSlash {
+  display: inline-block;
+  width: 25vw;
+	height: 20vw;
+  padding: 2vw;
+  padding-top: 0vw;
+  background: linear-gradient(#1aff1a, var(--main-fg-color));
+	-webkit-transform: skew(-30deg);
+	   -moz-transform: skew(-30deg);
+	     -o-transform: skew(-30deg);
+	        transform: skew(-30deg);
+  border-radius: 60px;
+  border: 0.3vw solid var(--main-tab-color);
+}
+
+#divBarLeft {
+  margin-right: 3vw;
+  margin-top: -8vw;
+  opacity: 0;
+  animation: slideInLeft 2s forwards;
+}
+
+@keyframes slideInLeft {
+  from { margin-right: 30vw; opacity: 0;   }
+  to   { margin-right: 3vw;  opacity: 100; }
+}
+
+#divBarRight {
+  margin-left: 3vw;
+  margin-top: 0vw;
+  opacity: 0;
+  animation: slideInRight 2s forwards;
+}
+
+@keyframes slideInRight {
+  from { margin-left: 30vw; opacity: 0;   }
+  to   { margin-left: 3vw;  opacity: 100; }
+}
+
+
+.homeText {
+  font-family: ProductSansRegular;
+  font-size: 3vw;
+  color: var(--main-tab-color);
+  text-align: center;
+}
+
+#descriptionTextRight {
+  font-size: 2vw !important;
+}
+
+#footerTab {
+  width: 99vw;
+  height: 8vw;
+  margin-top: 6vw;
+  background: linear-gradient(var(--main-fg-color), #3b884c);
+}
+
+#centeredFooter {
+  width: 85vw;
+  height: 8vw;
+  margin: auto;
+}
+
+.statsFooterTab {
+  position: relative;
+  top: 0.2vw;
+  display: inline-block;
+  height: 2.5vw;
+  font-family: ProductSansRegular;
+  color: var(--main-tab-color);
+  font-size: 2.5vw;
+}
+
+#nbPlayerRegistered {
+  float: left;
+}
+
+#nbKillsCumulated {
+  left: 12vw;
+  margin: auto;
+}
+
+#nbWinsCumulated {
+  float: right;
+  right: 2vw;
+}
+
+.pFooter {
+  display: inline-block;
+  font-family: ProductSansBold;
+  font-size: 2.6vw;
+  background: -webkit-linear-gradient(#1aff1a, var(--main-fg-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

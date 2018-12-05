@@ -1,0 +1,97 @@
+
+#mainBody {
+  margin-top: -5vw;
+}
+
+.centeredWrapper {
+  width: 70vw;
+  height: 70vh;
+  margin: auto;
+  margin-top: -2vw;
+  text-align: center;
+  color: white;
+  box-shadow: 6px -6px 12px #808080;
+  border-radius: 200px;
+}
+
+
+.centeredWrapper img {
+  width: 70vw;
+  height: auto;
+  border-radius: 190px;
+}
+
+
+
+#pOverImg {
+  position: relative;
+  width: 60vw;
+  margin: auto;
+  margin-top: -35vw;
+  font-family: ProductSansRegular;
+  font-size: 4.5vw;
+  color: #DDDDDD;
+}
+
+
+
+
+
+
+#searchStatsButton {
+  position: relative;
+  width: 20vw;
+  height: 6vw;
+  margin: auto;
+  margin-top: 3vw;
+  font-family: GeoSansLight;
+  font-size: 2.5vw;
+  line-height: 2.5vw;
+  border: 0.25vw solid #DDDDDD;
+  border-radius: 70px;
+  color: #DDDDDD;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#searchStatsButton:hover {
+  cursor: pointer;
+  animation-name: borderRadiusFade;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes borderRadiusFade {
+  0%  {
+    border-radius: 70px;
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    letter-spacing: 0px;
+  }
+  100%  {
+    border-radius: 30px;
+    border-color: var(--main-fg-color);
+    color: var(--main-fg-color);
+    letter-spacing: 4px;
+  }
+}
+
+#searchStatsButton:not(:hover) {
+  animation-name: unborderRadiusFade;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes unborderRadiusFade {
+  0%  {
+    border-radius: 30px;
+    border-color: var(--main-fg-color);
+    color: var(--main-fg-color);
+    letter-spacing: 4px;
+  }
+  100%  {
+    border-radius: 70px;
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    letter-spacing: 0px;
+  }
+}

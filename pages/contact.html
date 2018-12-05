@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>echo_ - Contact</title>
+        <link rel="shortcut icon" href="img/icons/echologo.png" />
+        <link rel="stylesheet" href="../css/master.css">
+        <link rel="stylesheet" href="../css/contact.css">
+        <script src="../assets/pageTitleScrambler.js" type="text/javascript"></script>
+        <!-- Used for custom alerts -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+
+    <body oncontextmenu="return false">
+        <header class="nav-menu-wrapper">
+            <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/search.html">Search</a></li>
+                <input class="searchInputBar" maxlength="100" placeholder="Enter your Username.." type="text"></input>
+                <button class="platformsButton" id="pcButtonTab" onclick="pbUpdate('pc')">
+                    <img src="https://png.icons8.com/ios/50/000000/windows8-filled.png" alt="windows"/>
+                </button>
+                <button class="platformsButton" id="psnButtonTab" onclick="pbUpdate('psn')">
+                    <img src="https://png.icons8.com/ios/50/000000/play-station-filled.png" alt="playstation"/>
+                </button>
+                <button class="platformsButton" id="xblButtonTab" onclick="pbUpdate('xbl')">
+                    <img src="https://png.icons8.com/ios/50/000000/xbox-filled.png" alt="xbox"/>
+                </button>
+            </ul>
+            </nav>
+        </header>
+        <div class="crop">
+            <img src="../img/fortnite-8.jpg" alt="Fortnite Main Wallpaper 8" class="full-width"></img>
+        </div>
+        <div class="mainBody" id="mainBody">
+            <h1>contact me_</h1>
+        </div>
+        <script src="../assets/getFtnStats.js"      type="text/javascript"></script>
+        <script src="../assets/manageButtonsTab.js" type="text/javascript"></script>
+    </body>
+</html>

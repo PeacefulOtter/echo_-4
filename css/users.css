@@ -1,0 +1,194 @@
+
+@import url('//raw.githubusercontent.com/necolas/normalize.css/master/normalize.css');
+
+
+#centeredAutoUsername {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 50vw; /* poussé de la moitié de hauteur de viewport */
+  transform: translateX(-50%); /* tiré de la moitié de sa propre largeur */
+}
+
+#playerUsername {
+  margin-top: 4vw;
+  margin-bottom: 2vw;
+  padding: 1vw;
+  font-family: ProductSansBold;
+  font-size: 4vw;
+  border-bottom: 2px solid #888888;
+  background: -webkit-linear-gradient(#d731e0, #9515c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* the whole div (used almost as body) */
+.displayStatsContainer {
+  position: relative;
+  width: 90vw;
+  height: auto;
+  margin: auto;
+}
+
+
+/* wrapper for solo, duo, squad and lifetime */
+.inlineStats {
+  display: inline-block;
+  position: relative;
+  top: 2vw;
+  width: 40vw;
+  height: auto;
+  padding: 10px;
+  background-color: #aaaaaa;
+  border: 0.25vw solid transparent;
+  border-image-source: linear-gradient(rgba(215, 49, 224, 0.7) 30%, rgba(149, 21, 196, 0.8) 70%);
+  border-image-slice: 2;
+  /* Fallback */
+  border-style: linear-gradient(rgba(215, 49, 224, 0.7) 30%, rgba(149, 21, 196, 0.8) 70%);
+}
+
+.inlineStats:hover {
+  -webkit-animation: fadeHoverInlineStatsIn 0.5s forwards;
+     -moz-animation: fadeHoverInlineStatsIn 0.5s forwards;
+       -o-animation: fadeHoverInlineStatsIn 0.5s forwards;
+          animation: fadeHoverInlineStatsIn 0.5s forwards;
+}
+.inlineStats:not(:hover) {
+  -webkit-animation: fadeHoverInlineStatsOut 0.5s forwards;
+     -moz-animation: fadeHoverInlineStatsOut 0.5s forwards;
+       -o-animation: fadeHoverInlineStatsOut 0.5s forwards;
+          animation: fadeHoverInlineStatsOut 0.5s forwards;
+}
+
+@keyframes fadeHoverInlineStatsIn {
+  100% { box-shadow: 0px 10px 5px 5px grey; }
+}
+@keyframes fadeHoverInlineStatsOut {
+  0% { box-shadow: 0px 10px 5px 5px grey; }
+  100% { box-shadow: none }
+}
+
+/* the symbol for each displayStats div */
+.symbolIcon {
+  width: 6vw;
+  height: auto;
+  margin-left: 3vw;
+  margin-top: 1vw;
+  border-radius: 60px;
+  border: 0.25vw solid #333;
+}
+
+
+/* title for the divs */
+.inlineStats h3 {
+  position: relative;
+  top: -1.25vw;
+  display: inline-block;
+  font-family: ProductSansBold;
+  font-size: 4vw;
+  margin-left: 3vw;
+  margin-bottom: -4vw;
+  color: #333;
+}
+
+.middleDetails {
+  float: left;
+  width: 30vw;
+  height: 5vw;
+}
+
+/* the div that contains actual content (stats + detailedIcon) */
+.detailedStatsDiv {
+  width: 35vw;
+  height: 30vw;
+  margin: auto;
+}
+
+/* little icon for each stat */
+.detailedIcon {
+  display: inline-block;
+  width: 3.5vw;
+  height: 3.5vw;
+  margin-bottom: -0.5vw;
+}
+
+/* the stats and only them */
+.statstext {
+  display: inline-block;
+  font-size: 3vw;
+  margin-left: 2vw;
+  font-family: ProductSansRegular;
+  background: -webkit-linear-gradient(#d731e0, #9515c4);
+  background-clip: text;
+  text-decoration-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.middleDetails h4 {
+  display: inline-block;
+  margin-left: 1vw;
+  font-family: ProductSansRegular;
+  font-size: 1.5vw;
+}
+
+.solo {
+  float: left;
+}
+
+.duo {
+  float: right;
+}
+
+.squad {
+  float: left;
+  margin-top: 2vw;
+}
+
+.life {
+  float: right;
+  margin-top: 2vw;
+  height: 52vw;
+}
+
+#wrapperDate {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 41vw;
+  margin-top: 5vw;
+  text-align: center;
+}
+
+#lastUpdate {
+  font-family: ProductSansBold;
+  font-size: 2.1vw;
+  line-height: 0.5vw;
+}
+
+#lastUpdateInfo {
+  font-family: ProductSansRegular;
+  font-size: 2vw;
+  background: -webkit-linear-gradient(#d731e0, #9515c4);
+  background-clip: text;
+  text-decoration-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* charts style */
+#chartsWrapper {
+  display: inline-block;
+  position: relative;
+  width: 90vw;
+  margin: auto;
+}
+
+#chartKills {
+  float: left;
+  display: inline-block;
+  position: relative;
+  width: 41vw;
+  margin-top: 5vw;
+}

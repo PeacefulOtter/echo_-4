@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>echo_ - User</title>
+        <link rel="shortcut icon" href="img/icons/echologo.png" />
+        <link rel="stylesheet" href="../css/master.css">
+        <link rel="stylesheet" href="../css/users.css">
+        <!-- css for chartist.js -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+        <!-- Used for custom alerts -->
+        <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+        <script src="../assets/pageTitleScrambler.js" type="text/javascript"></script>
+    </head>
+
+    <body oncontextmenu="return false">
+        <header class="nav-menu-wrapper">
+            <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/search.html">Search</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+                <input class="searchInputBar" maxlength="100" placeholder="Enter your Username.." type="text"></input>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="pcButtonTab" onchange="pbUpdate('pc')" />
+                    <img src="https://png.icons8.com/ios/50/000000/windows8-filled.png" alt="windows"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="psnButtonTab" onchange="pbUpdate('psn')" />
+                    <img src="https://png.icons8.com/ios/50/000000/play-station-filled.png" alt="playstation"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="xblButtonTab" onchange="pbUpdate('xbl')" />
+                    <img src="https://png.icons8.com/ios/50/000000/xbox-filled.png" alt="xbox"/>
+                </label>
+            </ul>
+            </nav>
+        </header>
+
+        <div class="crop" id="cropTabImage">
+            <img src="../img/fortnite-14.jpg" alt="Fortnite Main Wallpaper 6" class="full-width" id="tabImage"></img>
+        </div>
+
+        <div id="centeredAutoUsername">
+            <h2 id="playerUsername" style="visibility:hidden"></h2>
+        </div>
+        <div class="displayStatsContainer" id="megaWrapperStats" style="visibility:hidden">
+            <div class="solo inlineStats">
+                <img class="symbolIcon" src="../img/icons/solo2.png" alt="solo icon" />
+                <h3>SOLO</h3>
+                <div class="detailedStatsDiv">
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/gun.png" alt="gun icon" />
+                        <p class="statstext" id="soloPKills"></p>
+                        <h4>KILLS</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/ratio.png" alt="ratio icon" />
+                        <p class="statstext" id="soloPRatio"></p>
+                        <h4>K/D RATIO</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/scoreboard.png" alt="scoreboard icon" />
+                        <p class="statstext" id="soloPMatches"></p>
+                        <h4>MATCHES</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="soloPTop1"></p>
+                        <h4>TOPs 1 </h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/prize.png" alt="prize icon" />
+                        <p class="statstext" id="soloPWin%"></p>
+                        <h4>WIN %</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="duo inlineStats">
+                <img class="symbolIcon" src="../img/icons/duo2.png" alt="duo icon" />
+                <h3>DUO</h3>
+                <div class="detailedStatsDiv">
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/gun.png" alt="gun icon" />
+                        <p class="statstext" id="duoPKills"></p>
+                        <h4>KILLS</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/ratio.png" alt="ratio icon" />
+                        <p class="statstext" id="duoPRatio"></p>
+                        <h4>K/D RATIO</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/scoreboard.png" alt="scoreboard icon" />
+                        <p class="statstext" id="duoPMatches"></p>
+                        <h4>MATCHES</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="duoPTop1"></p>
+                        <h4>TOPs 1 </h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/prize.png" alt="prize icon" />
+                        <p class="statstext" id="duoPWin%"></p>
+                        <h4>WIN %</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="squad inlineStats">
+                <img class="symbolIcon" src="../img/icons/squad3.png" alt="squad icon" />
+                <h3>SQUAD</h3>
+                <div class="detailedStatsDiv">
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/gun.png" alt="gun icon" />
+                        <p class="statstext" id="squadPKills"></p>
+                        <h4>KILLS</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/ratio.png" alt="ratio icon" />
+                        <p class="statstext" id="squadPRatio"></p>
+                        <h4>K/D RATIO</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/scoreboard.png" alt="scoreboard icon" />
+                        <p class="statstext" id="squadPMatches"></p>
+                        <h4>MATCHES</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="squadPTop1"></p>
+                        <h4>TOPs 1 </h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/prize.png" alt="prize icon" />
+                        <p class="statstext" id="squadPWin%"></p>
+                        <h4>WIN %</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="life inlineStats">
+              <img class="symbolIcon" src="../img/icons/focus2.png" alt="analysis icon" />
+                <h3>LIFETIME</h3>
+                <div class="detailedStatsDiv">
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/gun.png" alt="gun icon" />
+                        <p class="statstext" id="lifePKills"></p>
+                        <h4>KILLS</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/ratio.png" alt="ratio icon" />
+                        <p class="statstext" id="lifePRatio"></p>
+                        <h4>K/D RATIO</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/scoreboard.png" alt="scoreboard icon" />
+                        <p class="statstext" id="lifePMatches"></p>
+                        <h4>MATCHES</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/dice.png" alt="dice icon" />
+                        <p class="statstext" id="lifePScore"></p>
+                        <h4>SCORE</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/prize.png" alt="prize icon" />
+                        <p class="statstext" id="lifePWins"></p>
+                        <h4>WINS</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="lifePTops3"></p>
+                        <h4>TOPs 3</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="lifePTops10"></p>
+                        <h4>TOPs 10</h4>
+                    </div>
+                    <div class="middleDetails">
+                        <img class="detailedIcon" src="../img/icons/trophy.png" alt="trophy icon" />
+                        <p class="statstext" id="lifePTops25"></p>
+                        <h4>TOPs 25</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="wrapperDate">
+                <p id="lastUpdate">Last update : </p>
+                <p id="lastUpdateInfo"></p>
+            </div>
+        </div>
+
+        <!-- CHARTS ! -->
+        <div id="chartsWrapper">
+            <div class="ct-chart" id="chartKills"></div>
+        </div>
+
+        <script src="../assets/playerStatsRetriever.js" type="text/javascript"></script>
+        <script src="../assets/manageButtonsTab.js"     type="text/javascript"></script>
+        <!-- javascript for chartist.js, make customizable charts -->
+        <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    </body>
+</html>

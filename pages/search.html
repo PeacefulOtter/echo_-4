@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>echo_ - Search</title>
+        <link rel="shortcut icon" href="img/icons/echologo.png" />
+        <link rel="stylesheet" href="../css/master.css">
+        <link rel="stylesheet" href="../css/search.css">
+        <link rel="stylesheet" href="../css/magictitle.css">
+        <script src="../assets/pageTitleScrambler.js" type="text/javascript"></script>
+        <!-- Used for custom alerts -->
+        <script src="../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js" type="text/javascript"></script>
+    </head>
+
+    <body oncontextmenu="return false">
+        <header class="nav-menu-wrapper">
+            <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+                <input class="searchInputBar" maxlength="100" placeholder="Enter your Username.." type="text"></input>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="pcButtonTab" onchange="pbUpdate('pc')" />
+                    <img src="https://png.icons8.com/ios/50/000000/windows8-filled.png" alt="windows"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="psnButtonTab" onchange="pbUpdate('psn')" />
+                    <img src="https://png.icons8.com/ios/50/000000/play-station-filled.png" alt="playstation"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="xblButtonTab" onchange="pbUpdate('xbl')" />
+                    <img src="https://png.icons8.com/ios/50/000000/xbox-filled.png" alt="xbox"/>
+                </label>
+            </ul>
+            </nav>
+        </header>
+
+        <div class="crop" id="cropTabImage">
+            <img src="../img/fortnite-7.jpg" alt="Fortnite Main Wallpaper 7" class="full-width" id="tabImage"></img>
+        </div>
+
+        <!-- Styles title, kind of magic -->
+        <main class="titleContainer" id="titleContainer">
+            <svg class="svg-text" width="1.5em" height="0.7em" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <filter id="drop-stroke-shadow">
+                    <fegaussianblur in="SourceAlpha" stddeviation="10"></fegaussianblur>
+                  </filter>
+                  <symbol id="stroke">
+                    <text x="50%" y="67%" fill="none" stroke-width=".035em" stroke-linecap="round" stroke-linejoin="round" paint-order="stroke fill" text-anchor="middle">Browse Fortnite Stats</text>
+                  </symbol>
+                  <symbol id="fill">
+                    <text x="50%" y="60%" text-anchor="middle">Browse Fortnite Stats</text>
+                  </symbol>
+                </defs>
+                <g class="svg-text__shaded__stroke" stroke="#23d170">
+                  <use y="5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke" opacity="0.5" filter="url(#drop-stroke-shadow)"></use>
+                  <use y="3%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+                  <use y="2%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+                  <use y="1%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke"></use>
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#stroke" stroke="#29fd7a"></use>
+                </g>
+                <g fill="#e0e0e0">
+                  <use class="svg-text__shaded" y="7%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="6.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="6%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="5.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="4.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="4%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill"></use>
+                  <use y="3.5%" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fill" fill="white"></use>
+                </g>
+            </svg>
+        </main>
+        <!-- Enough with titles ! -->
+
+        <div class="mainBody" id="mainBody">
+            <div class="centeredWrapper" id="wrapper">
+                <img src="../img/fortnite-5-1.png" alt="Fortnite Main Wallpaper 5-1" id="wrappedImg"/>
+                <p id="pOverImg">
+                    Discover the
+                    <b><span class="greenFade">s</span><span class="greenFade">t</span><span class="greenFade">a</span><span class="greenFade">t</span><span class="greenFade">s</span></b> of
+                    <b><span class="greenFade">p</span><span class="greenFade">l</span><span class="greenFade">a</span><span class="greenFade">y</span><span class="greenFade">e</span><span class="greenFade">r</span><span class="greenFade">s</span></b>
+                     around the World
+                </p>
+                <button id="searchStatsButton" onclick="searchStats()">SEARCH</button>
+            </div>
+        </div>
+
+        <script src="../assets/getFtnStats.js"        type="text/javascript"></script>
+        <script src="../assets/manageButtonsTab.js"   type="text/javascript"></script>
+        <script src="../assets/paragraphGreenFade.js" type="text/javascript"></script>
+        <script src="../assets/dynamicWidth.js"       type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-rate-limit": "^3.2.0",
+    "headers": "^0.9.6",
+    "header": "^0.1.1",
+    "mongodb": "^3.1.8",
+    "monk": "^6.0.6",
+    "mongoose": "^5.3.8",
+    "node-fetch": "^2.2.0",
+    "npm": "^6.4.1",
+    "sweetalert2": "^7.28.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "echo",
+    "fortnite",
+    "stats"
+  ],
+  "author": "Nathan MAIRE",
+  "license": "MIT"
+}

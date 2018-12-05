@@ -1,0 +1,362 @@
+
+
+
+:root {
+  /* Dark Grey */
+  --main-tab-color: #333333;
+  /* Light Grey */
+  --main-bg-color: #d0d0d0;
+  /* Light Green */
+  --main-fg-color: #14D150;
+}
+
+
+/* clean page */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  background-color: var(--main-bg-color);
+}
+
+/* remove border when clicking on element */
+*:focus {
+  outline: none;
+  outline-style: none;
+  -moz-outline-style: none;
+}
+
+/* Scrollbar style */
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 60px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@font-face {
+    font-family: ProductSansRegular;
+    src: url(fonts/Product_Sans_Regular.ttf);
+}
+@font-face {
+    font-family: ProductSansBold;
+    src: url(fonts/Product_Sans_Bold.ttf);
+}
+@font-face {
+    font-family: GeoSansLight;
+    src: url(fonts/GeosansLight.ttf);
+}
+
+
+
+
+/* SWEET ALERT 2 */
+
+.swal2-title {
+  font-family: ProductSansRegular;
+  font-size: 1.2vw;
+  margin-top: 15px;
+}
+
+.swal2-validation-message {
+  font-family: ProductSansRegular;
+  font-size: 1vw;
+}
+
+.sweetAlertFortniteBox {
+  margin-top: 3vw !important;
+  margin-right: 3vw !important;
+  border-radius: 20px !important;
+}
+
+.sweetAlertFortniteConfirmButton {
+  color: white !important;
+  background-color: var(--main-fg-color) !important;
+  border: 3px solid #ccc !important;
+  padding: 10px 30px 10px 30px !important;
+  font-family: GeoSansLight !important;
+  font-size: 1.3vw !important;
+  letter-spacing: 2px !important;
+}
+
+.sweetAlertFortniteConfirmButton:hover {
+  animation-name: fadeHoverSwalConfirmButton !important;
+  animation-duration: 0.7s !important;
+  animation-fill-mode: both !important;
+}
+
+@keyframes fadeHoverSwalConfirmButton {
+  0%    {
+    color: var(--main-tab-color) !important;
+    background-color: var(--main-fg-color) !important;
+    border-color: var(--main-tab-color) !important;
+  }
+  100%  {
+    color: var(--main-fg-color) !important;
+    background-color: var(--main-tab-color) !important;
+    border-color: var(--main-fg-color) !important;
+  }
+}
+
+
+@keyframes click-wave {
+  0% {
+    height: 1vw !important;
+    width: 1vw !important;
+    opacity: 0.35 !important;
+    position: relative !important;
+  }
+  100% {
+    height: 4vw !important;
+    width: 4vw !important;
+    margin-left: -1vw !important;
+    margin-top: -0.9vw !important;
+    opacity: 0 !important;
+  }
+}
+
+.swal2-radio input {
+  -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+      -ms-appearance: none !important;
+       -o-appearance: none !important;
+          appearance: none !important;
+  position: relative !important;
+  top: 0.30vw !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  height: 1.4vw !important;
+  width: 1.4vw !important;
+  transition: all 0.15s ease-out 0s !important;
+  background: #f2f2f2 !important;
+  border: none !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  margin-right: 0.5rem !important;
+  outline: none !important;
+  position: relative !important;
+  z-index: 1000 !important;
+}
+.swal2-radio input:hover {
+  background: #9fddb7 !important;
+}
+.swal2-radio input:checked {
+  background: var(--main-fg-color) !important;
+}
+.swal2-radio input:checked::before {
+  height: 1.4vw !important;
+  width: 1.4vw !important;
+  position: absolute !important;
+  content: '✔' !important;
+  display: inline-block !important;
+  font-size: 1vw !important;
+  text-align: center !important;
+  line-height: 1.4vw !important;
+}
+
+.swal2-radio input:checked::after {
+  -webkit-animation: click-wave 0.65s forwards;
+     -moz-animation: click-wave 0.65s forwards;
+          animation: click-wave 0.65s forwards;
+  background: #40e0d0 !important;
+  content: '' !important;
+  display: block !important;
+  position: relative !important;
+  z-index: 100 !important;
+}
+.swal2-radio input {
+  border-radius: 50% !important;
+}
+.swal2-radio input::after {
+  border-radius: 50% !important;
+}
+
+.swal2-radio span {
+  font-family: GeoSansLight;
+  font-size: 1.2vw;
+  color: var(--main-tab-color);
+}
+
+/*
+body {
+  color: #9faab7;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/* MENU TAB */
+
+nav ul {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+  height: 3vw;
+  margin: 0px;
+  list-style-type: none;
+  background-color: var(--main-tab-color);
+}
+
+nav li {
+  width: 6vw;
+  height: 2.5vw;
+  display: inline-block;
+  margin-left: 0.3vw;
+  padding-top: 0.25vw;
+  font-family: ProductSansBold;
+  font-size: 1vw;
+  text-align: center;
+  line-height: 2.5vw;
+}
+
+
+nav li :hover {
+  cursor: pointer;
+  border-radius: 60px;
+  animation-name: fadeHoverButtonTab;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeHoverButtonTab {
+  0%    { color: #fff; background-color: var(--main-tab-color);  }
+  100%  { color: var(--main-tab-color); background-color: var(--main-fg-color); }
+}
+
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.tabLabel {
+  position: relative;
+  width: 2.5vw;
+  height: 2.5vw;
+  float: right;
+  margin-top: 0.25vw;
+  margin-right: 1vw;
+  border-radius: 60px;
+  background-color: white;
+}
+
+.tabLabel > input {
+  visibility: hidden;
+  position: absolute;
+}
+.tabLabel > input + img {
+  cursor: pointer;
+  position: absolute;
+  width: 1.7vw;
+  height: 1.7vw;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 0.24vw;
+  border: 0.2vw solid transparent;
+  border-radius: 60px;
+}
+
+.tabLabel > input:hover + img {
+  cursor: pointer;
+  animation-name: fadeHoverPlatformsButton;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeHoverPlatformsButton {
+  0%    { border-color: transparent;          }
+  100%  { border-color: var(--main-fg-color); }
+}
+
+label > input:checked + img {
+  border-color: var(--main-fg-color);
+}
+
+
+.searchInputBar {
+  width: 14vw;
+  height: 2vw;
+  float: right;
+  margin-top: 0.3vw;
+  margin-right: 6vw;
+  padding-left: 0.8vw;
+  border: 0.2vw solid transparent;
+  border-radius: 60px;
+  font-family: ProductSansBold;
+  font-size: 0.9vw;
+}
+
+.searchInputBar:hover {
+  animation-name: fadeHoverInputBar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeHoverInputBar {
+  0%    { border: 0.2vw solid transparent; color: var(--main-fg-color); }
+  100%  { border: 0.2vw solid var(--main-fg-color); color: #000000;     }
+}
+
+.searchInputBar:focus {
+  border-color: var(--main-fg-color);
+}
+
+
+
+
+
+
+
+/* BACKGROUND IMAGE UNDER THE MENU */
+
+.crop {
+  position: relative;
+  width: 100%;
+  height: 25%;
+  overflow: hidden;
+}
+
+.crop img {
+  width: 100vw;
+  height: auto;
+  margin: -110px 0px 0px 0px;
+  filter: blur(2px);
+}
+
+
+
+
+
+
+/* MAIN BODY STYLE */
+
+#mainBody {
+  width: 100%;
+  margin: auto;
+  margin-top: 1vw;
+}

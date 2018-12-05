@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>echo_ - Home</title>
+        <link rel="shortcut icon" href="img/icons/echologo.png" />
+        <link rel="stylesheet" href="css/master.css">
+        <link rel="stylesheet" href="css/home.css">
+        <script src="assets/pageTitleScrambler.js" type="text/javascript"></script>
+        <!-- Used for custom alerts -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </head>
+
+
+    <body oncontextmenu="return false">
+
+        <header class="nav-menu-wrapper">
+            <nav>
+            <ul>
+                <li><a href="pages/search.html">Search</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <input class="searchInputBar" maxlength="100" placeholder="Enter your Username.." type="text"></input>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="pcButtonTab" onchange="pbUpdate('pc')" />
+                    <img src="https://png.icons8.com/ios/50/000000/windows8-filled.png" alt="windows"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="psnButtonTab" onchange="pbUpdate('psn')" />
+                    <img src="https://png.icons8.com/ios/50/000000/play-station-filled.png" alt="playstation"/>
+                </label>
+                <label class="tabLabel">
+                    <input type="radio" class="platformsButton" id="xblButtonTab" onchange="pbUpdate('xbl')" />
+                    <img src="https://png.icons8.com/ios/50/000000/xbox-filled.png" alt="xbox"/>
+                </label>
+            </ul>
+            </nav>
+        </header>
+
+
+        <div class="crop">
+            <img src="img/fortnite-1.jpg" alt="Fortnite Main Wallpaper 1" class="full-width"></img>
+        </div>
+
+
+        <div class="mainBody" id="mainBody">
+            <div id="centeredHome">
+                <div class="divSlash" id="divBarLeft">
+                    <h1 class="homeText"><span style="font-family: GeoSansLight;">echo_</span><br>Fortnite<br>Stats</h1>
+                    <h2 class="homeText" id="dynamicTextLeft"></h2>
+                </div>
+                <div class="divSlash" id="divBarRight">
+                    <p class="homeText" id="descriptionTextRight">● Mongoose database<br><br>● Charts to see your evolution<br><br>● Fortnite Master for accurate stats</p>
+                </div>
+            </div>
+            <footer id="footerTab">
+                <div id="centeredFooter">
+                    <div class="statsFooterTab" id="nbPlayerRegistered">
+                        Player Registered : <p class="pFooter" id="pPlayerRegistered"></p>
+                    </div>
+                    <div class="statsFooterTab" id="nbKillsCumulated">
+                        Total Kills : <p class="pFooter" id="pKillsCumulated"></p>
+                    </div>
+                    <div class="statsFooterTab" id="nbWinsCumulated">
+                        Total Wins : <p class="pFooter" id="pWinsCumulated"></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="assets/dbStatsRetriever.js" type="text/javascript"></script>
+        <script src="assets/textScramble.js"     type="text/javascript"></script>
+        <script src="assets/getFtnStats.js"      type="text/javascript"></script>
+        <script src="assets/manageButtonsTab.js" type="text/javascript"></script>
+    </body>
+</html>
